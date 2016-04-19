@@ -7,7 +7,7 @@ module RedisTestSetup
     dir_conf = File.expand_path(File.join(rails_root, 'config'))
     cwd = Dir.getwd
     Dir.chdir(rails_root)
-    raise "unable to launch redis-server" unless system("redis-server #{dir_conf}/redis-#{env}.conf")
+	#raise "unable to launch redis-server" unless system("redis-server #{dir_conf}/redis-#{env}.conf")
     Dir.chdir(cwd)
     at_exit do
       if (pid = `cat #{dir_temp}/redis-#{env}.pid`.strip) =~ /^\d+$/
