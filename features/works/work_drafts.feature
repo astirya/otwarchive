@@ -20,7 +20,7 @@ Feature: Work Drafts
     And I fill in "content" with "Klinger lay under his porch."  
     And I press "Preview"
   Then I should see a sentence starting with "Draft was successfully created. It will be automatically deleted on" with a date
-    And I should see Set timezone
+    And I should see "UTC"
     And I should not see a sentence starting with "Draft was successfully created. It will be automatically deleted on" with a time
   When I press "Edit"
   Then I should see "Edit Work"
@@ -45,7 +45,7 @@ Feature: Work Drafts
     And I fill in "content" with "this is second chapter content"
     And I press "Preview"
   Then I should see a sentence starting with "This is a draft chapter in an unposted work. The work will be automatically deleted on" with a date
-    And I should see Set timezone
+    And I should see "UTC"
     And I should not see a sentence starting with "This is a draft chapter in an unposted work. The work will be automatically deleted on" with a time
 
   Scenario: Purging old drafts
